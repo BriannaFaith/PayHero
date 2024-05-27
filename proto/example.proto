@@ -1,0 +1,15 @@
+syntax = "proto3";
+
+package example;
+
+option go_package = "github.com/BriannaFaith/PayHero/pb";
+
+message ExampleMessage {
+  string id = 1;
+  string content = 2;
+}
+
+service ExampleService {
+  rpc GetExample (ExampleMessage) returns (ExampleMessage);
+}
+
